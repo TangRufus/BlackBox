@@ -1,0 +1,452 @@
+===Test Case 1===
+Where is the Atom #1 ? Row:[1-8] Column:[1-8] ? 2 2
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 2 9
+Warning: Invalid input!
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 2 0
+Warning: Invalid input!
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 0 2
+Warning: Invalid input!
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 0 9
+Warning: Invalid input!
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 3 4
+Where is the Atom #3 ? Row:[1-8] Column:[1-8] ? 5 8
+Where is the Atom #4 ? Row:[1-8] Column:[1-8] ? 5 8
+Warning: Invalid input!
+Where is the Atom #4 ? Row:[1-8] Column:[1-8] ? 8 8
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 2
+Where should the ray start ? [1-8] ? 6
+Staring Position: BOTTOM 6
+Ray at Row:8,Col:6
+Ray at Row:7,Col:6
+Ray at Row:6,Col:6
+Ray at Row:5,Col:6
+Ray at Row:4,Col:6
+Ray at Row:3,Col:6
+Ray at Row:2,Col:6
+Ray at Row:1,Col:6
+Terminating Position: TOP 6
+Outcome = Miss
+===Test Case 2===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 4
+Where should the ray start ? [1-8] ? 3
+Staring Position: RIGHT 3
+Ray at Row:3,Col:8
+Ray at Row:3,Col:7
+Ray at Row:3,Col:6
+Ray at Row:3,Col:5
+--> Ray Absorbed
+Terminating Position: Not Available
+Outcome = Hit
+===Test Case 3===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 4
+Where should the ray start ? [1-8] ? 6
+Staring Position: RIGHT 6
+Ray at Row:6,Col:8
+--> Ray Reflected
+Ray at Row:6,Col:8
+Terminating Position: RIGHT 6
+Outcome = Reflection
+===Test Case 4===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 2
+Where should the ray start ? [1-8] ? 3
+Staring Position: BOTTOM 3
+Ray at Row:8,Col:3
+Ray at Row:7,Col:3
+Ray at Row:6,Col:3
+Ray at Row:5,Col:3
+Ray at Row:4,Col:3
+--> Ray Deflected
+Ray at Row:4,Col:2
+Ray at Row:4,Col:1
+Terminating Position: LEFT 4
+Outcome = Detour
+===Test Case 5===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 2
+Where should the ray start ? [1-8] ? 5
+Staring Position: BOTTOM 5
+Ray at Row:8,Col:5
+Ray at Row:7,Col:5
+Ray at Row:6,Col:5
+Ray at Row:5,Col:5
+Ray at Row:4,Col:5
+--> Ray Deflected
+Ray at Row:4,Col:6
+Ray at Row:4,Col:7
+--> Ray Deflected
+Ray at Row:3,Col:7
+Ray at Row:2,Col:7
+Ray at Row:1,Col:7
+Terminating Position: TOP 7
+Outcome = Detour
+===Test Case 6===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 1
+Where should the ray start ? [1-8] ? 8
+Staring Position: TOP 8
+Ray at Row:1,Col:8
+Ray at Row:2,Col:8
+Ray at Row:3,Col:8
+Ray at Row:4,Col:8
+--> Ray Absorbed
+Terminating Position: Not Available
+Outcome = Hit
+==Test Case 7===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  @  .  .  .  .  .  .  2  *
+L  3  .  .  .  @  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  .  .  .  .  .  @  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  .  .  .  .  .  .  7  T
+   8  .  .  .  .  .  .  .  @  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? -1
+Bye!
+===Test Case 8===
+Where is the Atom #1 ? Row:[1-8] Column:[1-8] ? 2 2  
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 4 6
+Where is the Atom #3 ? Row:[1-8] Column:[1-8] ? 5 6
+Where is the Atom #4 ? Row:[1-8] Column:[1-8] ? 7 2
+              *TOP* 
+       1  2  3  4  5  6  7  8  
+    1  .  .  .  .  .  .  .  .  1    
+ *  2  .  @  .  .  .  .  .  .  2  * 
+ L  3  .  .  .  .  .  .  .  .  3  R 
+ E  4  .  .  .  .  .  @  .  .  4  I 
+ F  5  .  .  .  .  .  @  .  .  5  G 
+ T  6  .  .  .  .  .  .  .  .  6  H 
+ *  7  .  @  .  .  .  .  .  .  7  T 
+    8  .  .  .  .  .  .  .  .  8  * 
+       1  2  3  4  5  6  7  8  
+             *BOTTOM* 
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 2? 
+Where should the ray start ? [1-8] ? 5? 
+Ray at Row:8,Col:5 
+Ray at Row:7,Col:5 
+Ray at Row:6,Col:5 
+--> Ray Deflected 
+Ray at Row:6,Col:4 
+Ray at Row:6,Col:3 
+--> Ray Deflected 
+Ray at Row:5,Col:3 
+Ray at Row:4,Col:3 
+Ray at Row:3,Col:3 
+--> Ray Deflected 
+Ray at Row:3,Col:4 
+Ray at Row:3,Col:5 
+--> Ray Deflected 
+Ray at Row:2,Col:5 
+Ray at Row:1,Col:5 
+Terminating Position: TOP 5
+Outcome = Miss
+              *TOP* 
+       1  2  3  4  5  6  7  8  
+    1  .  .  .  .  .  .  .  .  1    
+ *  2  .  @  .  .  .  .  .  .  2  * 
+ L  3  .  .  .  .  .  .  .  .  3  R 
+ E  4  .  .  .  .  .  @  .  .  4  I 
+ F  5  .  .  .  .  .  @  .  .  5  G 
+ T  6  .  .  .  .  .  .  .  .  6  H 
+ *  7  .  @  .  .  .  .  .  .  7  T 
+    8  .  .  .  .  .  .  .  .  8  * 
+       1  2  3  4  5  6  7  8  
+             *BOTTOM* 
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? -1
+Bye! 
+===Test Case 9===
+Where is the Atom #1 ? Row:[1-8] Column:[1-8] ? 2 8
+Where is the Atom #2 ? Row:[1-8] Column:[1-8] ? 5 3
+Where is the Atom #3 ? Row:[1-8] Column:[1-8] ? 7 3
+Where is the Atom #4 ? Row:[1-8] Column:[1-8] ? 7 7
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 4
+Where should the ray start ? [1-8] ? 5
+Staring Position: RIGHT 5
+Ray at Row:5,Col:8
+Ray at Row:5,Col:7
+Ray at Row:5,Col:6
+Ray at Row:5,Col:5
+Ray at Row:5,Col:4
+--> Ray Absorbed
+Terminating Position: Not Available
+Outcome = Hit
+===Test Case 10===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 4
+Where should the ray start ? [1-8] ? 3
+Staring Position: RIGHT 3
+Ray at Row:3,Col:8
+--> Ray Reflected
+Ray at Row:3,Col:8
+Terminating Position: RIGHT 3
+Outcome = Reflection
+===Test Case 11===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 3
+Where should the ray start ? [1-8] ? 6
+Staring Position: LEFT 6
+Ray at Row:6,Col:1
+Ray at Row:6,Col:2
+--> Ray Reflected
+Ray at Row:6,Col:2
+Ray at Row:6,Col:1
+Terminating Position: LEFT 6
+Outcome = Reflection
+===Test Case 12===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 1
+Where should the ray start ? [1-8] ? 4
+Staring Position: TOP 4
+Ray at Row:1,Col:4
+Ray at Row:2,Col:4
+Ray at Row:3,Col:4
+Ray at Row:4,Col:4
+--> Ray Deflected
+Ray at Row:4,Col:5
+Ray at Row:4,Col:6
+Ray at Row:4,Col:7
+Ray at Row:4,Col:8
+Terminating Position: RIGHT 4
+Outcome = Detour
+===Test Case 13===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 2
+Where should the ray start ? [1-8] ? 4
+Staring Position: BOTTOM 4
+Ray at Row:8,Col:4
+--> Ray Deflected
+Ray at Row:8,Col:5
+Ray at Row:8,Col:6
+--> Ray Deflected
+Terminating Position: BOTTOM 6
+Outcome = Detour
+===Test Case 14===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 4
+Where should the ray start ? [1-8] ? 6
+Staring Position: RIGHT 6
+Ray at Row:6,Col:8
+--> Ray Deflected
+Ray at Row:5,Col:8
+Ray at Row:4,Col:8
+Ray at Row:3,Col:8
+--> Ray Absorbed
+Terminating Position: Not Available
+Outcome = Hit
+===Test Case 15===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 1
+Where should the ray start ? [1-8] ? 5
+Staring Position: TOP 5
+Ray at Row:1,Col:5
+Ray at Row:2,Col:5
+Ray at Row:3,Col:5
+Ray at Row:4,Col:5
+Ray at Row:5,Col:5
+Ray at Row:6,Col:5
+Ray at Row:7,Col:5
+Ray at Row:8,Col:5
+Terminating Position: BOTTOM 5
+Outcome = Miss
+===Test Case 16===
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? 1
+Where should the ray start ? [1-8] ? 6
+Staring Position: TOP 6
+Ray at Row:1,Col:6
+Ray at Row:2,Col:6
+Ray at Row:3,Col:6
+Ray at Row:4,Col:6
+Ray at Row:5,Col:6
+Ray at Row:6,Col:6
+--> Ray Deflected
+Ray at Row:6,Col:5
+Ray at Row:6,Col:4
+--> Ray Reflected
+Ray at Row:6,Col:4
+Ray at Row:6,Col:5
+Ray at Row:6,Col:6
+--> Ray Deflected
+Ray at Row:5,Col:6
+Ray at Row:4,Col:6
+Ray at Row:3,Col:6
+Ray at Row:2,Col:6
+Ray at Row:1,Col:6
+Terminating Position: TOP 6
+Outcome = Reflection
+             *TOP*
+      1  2  3  4  5  6  7  8 
+   1  .  .  .  .  .  .  .  .  1   
+*  2  .  .  .  .  .  .  .  @  2  *
+L  3  .  .  .  .  .  .  .  .  3  R
+E  4  .  .  .  .  .  .  .  .  4  I
+F  5  .  .  @  .  .  .  .  .  5  G
+T  6  .  .  .  .  .  .  .  .  6  H
+*  7  .  .  @  .  .  .  @  .  7  T
+   8  .  .  .  .  .  .  .  .  8  *
+      1  2  3  4  5  6  7  8 
+            *BOTTOM*
+What is the ray position ? [1=TOP, 2=BOTTOM, 3=LEFT, 4=RIGHT, -1=EXIT] ? -1
+Bye!
